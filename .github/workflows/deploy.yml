@@ -14,4 +14,4 @@ jobs:
           port: 2222
           username: marcoslp
           key: ${{secrets.SSH_KEY}}
-          script: "cd /var/www/html/laravelapp; git pull; npm run build"
+          script: "cd /var/www/html/laravelapp; whoami"
