@@ -4,14 +4,14 @@ on:
 
 jobs:
   deploy:
-  name: Deploy to VPS
-  runs-on: ubuntu-22.04
-  steps:
-    - name: Deploy
-      uses: appleboy/ssh-action@v0.1.8
-      with:
-        host: mlorpen.informaticamajada.es
-        port: 2222
-        username: marcoslp
-        key: ${{secrets.SSH_KEY}}
-        script: "cd /var/www/html/laravelapp; ls"
+    name: Deploy to VPS
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Deploy
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: mlorpen.informaticamajada.es
+          port: 2222
+          username: marcoslp
+          key: ${{secrets.SSH_KEY}}
+          script: "cd /var/www/html/laravelapp; ls"
